@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 5 - Enigma sulla Sicurezza</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-image: url('img/security-background.jpg');">
+
+<div class="container">
+    <h2>Episodio 5: Enigma sulla Sicurezza</h2>
+    <p class="story-text">Venom sta utilizzando exploit di sicurezza per infiltrarsi nei dispositivi con credenziali deboli. Per respingerlo, devi risolvere il seguente enigma:</p>
+    <p class="enigma-text"><strong>“Mi proteggi da intrusioni, blocchi attacchi, e il tuo nome inizia con la lettera F. Chi sono?”</strong></p>
+    <div class="mt-4">
+        <input type="text" id="answer" class="form-control" placeholder="Scrivi la risposta">
+        <button class="btn btn-custom mt-3" onclick="checkAnswer()">Invia</button>
+        <p id="result" class="result-text"></p>
+    </div>
+</div>
+
+<script>
+  function checkAnswer() {
+    const correctAnswer = 'FIREWALL';
+    const userAnswer = document.getElementById('answer').value.toUpperCase().trim();
+    const result = document.getElementById('result');
+    if (userAnswer === correctAnswer) {
+      result.innerText = "Corretto! La rete è al sicuro.";
+      result.classList.add('text-success');
+      setTimeout(() => {
+        window.location.href = 'ultima.domanda.html';
+      }, 1000);
+    } else {
+      result.innerText = "Risposta sbagliata. Riprova!";
+      result.classList.add('text-danger');
+    }
+  }
+</script>
+
+</body>
+</html>

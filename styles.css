@@ -1,0 +1,118 @@
+/* Generale */
+body {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background-size: cover; /* Copre lo schermo */
+    background-position: center; /* Centra l'immagine */
+    background-repeat: no-repeat; /* Non ripete l'immagine */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2 {
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.story-text, .enigma-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.victory-text {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Pulsanti personalizzati */
+.btn-custom {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #ff0000;
+    transform: scale(1.05);
+}
+
+.text-success {
+    color: #4caf50 !important;
+}
+
+.text-danger {
+    color: #f44336 !important;
+}
+
+.result-text {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Input */
+input.form-control {
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+input.form-control:focus {
+    outline: none;
+    border-color: #000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Personalizzazione delle immagini di sfondo */
+.background-customizable {
+    background-size: contain; /* Adatta l'immagine senza tagliarla */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Immagini scalabili */
+img.resizable {
+    max-width: 100%; /* Si adatta al contenitore */
+    max-height: 100%; /* Non supera l'altezza del contenitore */
+    width: auto; /* Mantiene proporzioni */
+    height: auto;
+    border-radius: 5px; /* Angoli arrotondati opzionali */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Effetto ombra */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    .story-text, .enigma-text {
+        font-size: 1rem;
+    }
+    .btn {
+        font-size: 1rem;
+    }
+}

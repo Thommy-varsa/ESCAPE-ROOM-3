@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 2 - Protocollo Wireless</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-image: url('img/quiz2-background.jpg');">
+
+<div class="container">
+    <h2>Episodio 2: Protocollo Wireless</h2>
+    <p class="story-text">Venom ha iniziato a diffondersi attraverso la rete wireless, accedendo ai dispositivi che trasmettono segnali senza fili. Devi configurare una difesa wireless conoscendo i dettagli di come funzionano i protocolli. Il tempo stringe, e la rete deve essere bloccata.</p>
+    <p>Quale dei seguenti protocolli è utilizzato per la sicurezza di una rete Wi-Fi?</p>
+    <button class="btn btn-custom" onclick="checkAnswer('A')">A) FTP</button>
+    <button class="btn btn-custom" onclick="checkAnswer('B')">B) WPA2</button>
+    <button class="btn btn-custom" onclick="checkAnswer('C')">C) HTTP</button>
+    <button class="btn btn-custom" onclick="checkAnswer('D')">D) SMTP</button>
+    <p id="result" class="result-text"></p>
+    </div>
+    
+    <script>
+      function checkAnswer(answer) {
+        const correctAnswer = 'B';
+        const result = document.getElementById('result');
+        if (answer === correctAnswer) {
+          result.innerText = "Corretto! La rete wireless è protetta.";
+          result.classList.add('text-success');
+          setTimeout(() => {
+            window.location.href = 'question.html';
+          }, 1000);
+        } else {
+          result.innerText = "Risposta sbagliata. Riprova!";
+          result.classList.add('text-danger');
+        }
+      }
+    </script>
+    
+    </body>
+    </html>
+    

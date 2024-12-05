@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 6 - Enigma su Switch e VLAN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-image: url('img/switch-background.jpg');">
+
+<div class="container">
+    <h2>Episodio 6: Enigma su Switch e VLAN</h2>
+    <p class="story-text">L'ultimo passo di Venom è sabotare i tuoi switch e le VLAN configurate, creando conflitti tra segmenti della rete. Per fermarlo, devi risolvere il seguente enigma:</p>
+    <p class="enigma-text"><strong>“Ti permetto di segmentare una rete fisica in più reti logiche. Il mio acronimo è di quattro lettere e inizia con V. Chi sono?”</strong></p>
+    <div class="mt-4">
+        <input type="text" id="answer" class="form-control" placeholder="Scrivi la risposta">
+        <button class="btn btn-custom mt-3" onclick="checkAnswer()">Invia</button>
+        <p id="result" class="result-text"></p>
+    </div>
+</div>
+
+<script>
+  function checkAnswer() {
+    const correctAnswer = 'VLAN';
+    const userAnswer = document.getElementById('answer').value.toUpperCase().trim();
+    const result = document.getElementById('result');
+    if (userAnswer === correctAnswer) {
+      result.innerText = "Corretto! Hai sconfitto Venom.";
+      result.classList.add('text-success');
+      setTimeout(() => {
+        window.location.href = 'victory.html';
+      }, 1000);
+    } else {
+      result.innerText = "Risposta sbagliata. Riprova!";
+      result.classList.add('text-danger');
+    }
+  }
+</script>
+
+</body>
+</html>
